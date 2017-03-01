@@ -183,7 +183,9 @@ public class Proxy extends Thread {
 
 				if (verbose)
 					System.err.println("TCPTunnel listening...");
+				System.out.println("Before listening");
 				SocketTunnel tunnel = new SocketTunnel(listener.accept(), remoteHost, remotePort);
+				System.out.println("Succeed listening");
 				if (multi)
 					tunnel.start();
 				else
